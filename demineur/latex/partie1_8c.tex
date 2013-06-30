@@ -1,0 +1,165 @@
+\hypertarget{partie1_8c}{
+\section{partie1.c File Reference}
+\label{partie1_8c}\index{partie1.c@{partie1.c}}
+}
+
+
+Ce fichier contient les fonctions de la partie de Massinissa MOHANDI.  
+
+
+{\ttfamily \#include \char`\"{}demineur.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{partie1_8c_a7b66f2463f10e357308ef5247fe45d55}{Affichage\_\-menu} ()
+\begin{DoxyCompactList}\small\item\em Fonction d'affichage du menu principal du jeu. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie1_8c_ada00be9eb15cc691017d599b55abdd9b}{Perdu} (\hyperlink{struct_context}{Context} c, \hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille, \hyperlink{structgrille}{grille} \hyperlink{structgrille}{grille}, \hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre})
+\begin{DoxyCompactList}\small\item\em Cette fonction verifie si on a perdu la partie. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie1_8c_af2efa0c2e276982e38eb999b967a9b3f}{Perdre\_\-partie} (\hyperlink{structparametre__grilles}{parametre\_\-grille} param)
+\begin{DoxyCompactList}\small\item\em Cette fonction affiche la fenetre Perdu. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie1_8c_a058403ba1656ce9f02a792f035c8e385}{Gagne} (\hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre}, \hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille)
+\begin{DoxyCompactList}\small\item\em Cette fonction verifie si on a gagné la partie. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie1_8c_a5b92aa51937eb00f8ccfab9e2cb1f739}{Gagner\_\-partie} (\hyperlink{structparametre__grilles}{parametre\_\-grille} param)
+\begin{DoxyCompactList}\small\item\em Cette fonction affiche la fenetre Gagné. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie1_8c_a7688d6c13ffd2f66c239e018405e87a1}{Regles} ()
+\begin{DoxyCompactList}\small\item\em Fonction d'affichage des regles du jeu. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ce fichier contient les fonctions de la partie de Massinissa MOHANDI. \begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{partie1_8c_a7b66f2463f10e357308ef5247fe45d55}{
+\index{partie1.c@{partie1.c}!Affichage\_\-menu@{Affichage\_\-menu}}
+\index{Affichage\_\-menu@{Affichage\_\-menu}!partie1.c@{partie1.c}}
+\subsubsection[{Affichage\_\-menu}]{\setlength{\rightskip}{0pt plus 5cm}void Affichage\_\-menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_a7b66f2463f10e357308ef5247fe45d55}
+
+
+Fonction d'affichage du menu principal du jeu. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+\hypertarget{partie1_8c_a058403ba1656ce9f02a792f035c8e385}{
+\index{partie1.c@{partie1.c}!Gagne@{Gagne}}
+\index{Gagne@{Gagne}!partie1.c@{partie1.c}}
+\subsubsection[{Gagne}]{\setlength{\rightskip}{0pt plus 5cm}int Gagne (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametre, }
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_a058403ba1656ce9f02a792f035c8e385}
+
+
+Cette fonction verifie si on a gagné la partie. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametre} & parametres de la grille \\
+\hline
+{\em ma\_\-grille} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si on a gagné la partie et 0 sinon 
+\end{DoxyReturn}
+\hypertarget{partie1_8c_a5b92aa51937eb00f8ccfab9e2cb1f739}{
+\index{partie1.c@{partie1.c}!Gagner\_\-partie@{Gagner\_\-partie}}
+\index{Gagner\_\-partie@{Gagner\_\-partie}!partie1.c@{partie1.c}}
+\subsubsection[{Gagner\_\-partie}]{\setlength{\rightskip}{0pt plus 5cm}void Gagner\_\-partie (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_a5b92aa51937eb00f8ccfab9e2cb1f739}
+
+
+Cette fonction affiche la fenetre Gagné. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie1_8c_af2efa0c2e276982e38eb999b967a9b3f}{
+\index{partie1.c@{partie1.c}!Perdre\_\-partie@{Perdre\_\-partie}}
+\index{Perdre\_\-partie@{Perdre\_\-partie}!partie1.c@{partie1.c}}
+\subsubsection[{Perdre\_\-partie}]{\setlength{\rightskip}{0pt plus 5cm}void Perdre\_\-partie (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_af2efa0c2e276982e38eb999b967a9b3f}
+
+
+Cette fonction affiche la fenetre Perdu. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie1_8c_ada00be9eb15cc691017d599b55abdd9b}{
+\index{partie1.c@{partie1.c}!Perdu@{Perdu}}
+\index{Perdu@{Perdu}!partie1.c@{partie1.c}}
+\subsubsection[{Perdu}]{\setlength{\rightskip}{0pt plus 5cm}void Perdu (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{c, }
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille, }
+\item[{{\bf grille}}]{grille, }
+\item[{{\bf parametre\_\-grille}}]{parametre}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_ada00be9eb15cc691017d599b55abdd9b}
+
+
+Cette fonction verifie si on a perdu la partie. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & la structure \hyperlink{struct_context}{Context} contenant les images chargees et les surfaces. \\
+\hline
+{\em ma\_\-grille} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em parametre} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie1_8c_a7688d6c13ffd2f66c239e018405e87a1}{
+\index{partie1.c@{partie1.c}!Regles@{Regles}}
+\index{Regles@{Regles}!partie1.c@{partie1.c}}
+\subsubsection[{Regles}]{\setlength{\rightskip}{0pt plus 5cm}void Regles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{partie1_8c_a7688d6c13ffd2f66c239e018405e87a1}
+
+
+Fonction d'affichage des regles du jeu. 
+
+\begin{DoxyAuthor}{Author}
+Massinissa MOHANDI 
+\end{DoxyAuthor}

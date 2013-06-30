@@ -1,0 +1,308 @@
+\hypertarget{partie2_8c}{
+\section{partie2.c File Reference}
+\label{partie2_8c}\index{partie2.c@{partie2.c}}
+}
+
+
+Ce fichier contient les fonctions de la partie de Emilien RAZAFIMAMPIANDRA.  
+
+
+{\ttfamily \#include \char`\"{}demineur.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{partie2_8c_a26141c920c467b441b289e6bfccb4c9d}{Initialise} (\hyperlink{structtableau}{tableau} plateau, \hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Cette fonction met toutes les valeurs de la matrice à zéro. La mise à zéro est nécessaire avant de mettre les différentes valeurs correspondant au nombre de mines et de voisins afin de ne pas avoir des résultats faussés. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a541933b1cd22acb8b80f379d7dfa7e9f}{Pose\_\-mines} (\hyperlink{structtableau}{tableau} plateau, \hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Cette fonction a pour but de sélectionner des cases au hasard pour y poser une mine. Les cases qui contiennent des mines auront alors la valeur -\/1. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a11598ddf42e4ba05ff41f7e408f7c545}{Calcule\_\-voisins} (\hyperlink{structtableau}{tableau} plateau, \hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Après avoir posé les mines chaque case aura une valeur qu'on lui attribue qui correspond au nombre de mines qui lui est autour. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a7cb10fae1a08375bbd9d9798bd8ab959}{Facile} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Paramètre la grille de jeu à 9$\ast$9 cases contenant 10 mines. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a49156d81d9edb7b66a3e056cfcaf57db}{Moyen} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Paramètre la grille de jeu à 16$\ast$16 cases contenant 40 mines. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a3f00f55636a57ec46e14a7e6aae74f25}{Difficile} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Paramètre la grille de jeu à 16$\ast$30 cases contenant 99 mines. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_af54de8c74e254b722a37d567321e3415}{Affichage\_\-parametres} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Créer une fenêtre de taille normalisée par le groupe pour afficher lesparamètres, c'est-\/à-\/dire les différents niveau disponibles. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_acb6dc5fb493781628a2265b857019dc0}{Nouvelle\_\-grille} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres, \hyperlink{structtableau}{tableau} plateau)
+\begin{DoxyCompactList}\small\item\em Cette fonction crée une nouvelle grille en l'initialisant en posant les mines et en calculant le nombre de voisins; c'est la fonction qui permet de changer de plateau de jeu a chaque partie. \item\end{DoxyCompactList}\item 
+\hyperlink{structgrille}{grille} \hyperlink{partie2_8c_ac371a2f31fa0f5b78dc630510fbb578a}{Conversion} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres, \hyperlink{structtableau}{tableau} plateau)
+\begin{DoxyCompactList}\small\item\em Lors de l'unification des parties effectuées par chaque membre du groupe, il a été remarqué que certaines parties ne collaient pas ensemble, et cette fonction permet alors de convertir un plateau donné sous une autre forme afin de créer une certaine compatibilité à chaque partie des membres du groupe. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie2_8c_af3ddc6e87f49ce90cc0fd3b20e5186be}{joue\_\-apres\_\-parametrage} (\hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre})
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'ouvrir une grille de jeu apres avoir choisi le niveau de jeu souhaité \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_a9c8e470e7ed54f04340099e225b60470}{personnalise} (\hyperlink{structparametre__grilles}{parametre\_\-grille} parametres)
+\begin{DoxyCompactList}\small\item\em Etant donné l'inexistance de fonctions de saisie tel que scanf sur une fenêtre sdl, on récupère donc les données saisies par l'utilisateur sur le terminal, d'où l'utilité de cette fonction. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie2_8c_aa7a83d90f4e3ff66110288a89eac5bfe}{clean\_\-stdin} (void)
+\begin{DoxyCompactList}\small\item\em Permet de vider le buffer pour l'entrée clavier et eviter le rebouclage infini. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ce fichier contient les fonctions de la partie de Emilien RAZAFIMAMPIANDRA. \begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{partie2_8c_af54de8c74e254b722a37d567321e3415}{
+\index{partie2.c@{partie2.c}!Affichage\_\-parametres@{Affichage\_\-parametres}}
+\index{Affichage\_\-parametres@{Affichage\_\-parametres}!partie2.c@{partie2.c}}
+\subsubsection[{Affichage\_\-parametres}]{\setlength{\rightskip}{0pt plus 5cm}void Affichage\_\-parametres (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_af54de8c74e254b722a37d567321e3415}
+
+
+Créer une fenêtre de taille normalisée par le groupe pour afficher lesparamètres, c'est-\/à-\/dire les différents niveau disponibles. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a11598ddf42e4ba05ff41f7e408f7c545}{
+\index{partie2.c@{partie2.c}!Calcule\_\-voisins@{Calcule\_\-voisins}}
+\index{Calcule\_\-voisins@{Calcule\_\-voisins}!partie2.c@{partie2.c}}
+\subsubsection[{Calcule\_\-voisins}]{\setlength{\rightskip}{0pt plus 5cm}void Calcule\_\-voisins (
+\begin{DoxyParamCaption}
+\item[{{\bf tableau}}]{plateau, }
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a11598ddf42e4ba05ff41f7e408f7c545}
+
+
+Après avoir posé les mines chaque case aura une valeur qu'on lui attribue qui correspond au nombre de mines qui lui est autour. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & la matrice \\
+\hline
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_aa7a83d90f4e3ff66110288a89eac5bfe}{
+\index{partie2.c@{partie2.c}!clean\_\-stdin@{clean\_\-stdin}}
+\index{clean\_\-stdin@{clean\_\-stdin}!partie2.c@{partie2.c}}
+\subsubsection[{clean\_\-stdin}]{\setlength{\rightskip}{0pt plus 5cm}void clean\_\-stdin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_aa7a83d90f4e3ff66110288a89eac5bfe}
+
+
+Permet de vider le buffer pour l'entrée clavier et eviter le rebouclage infini. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+\hypertarget{partie2_8c_ac371a2f31fa0f5b78dc630510fbb578a}{
+\index{partie2.c@{partie2.c}!Conversion@{Conversion}}
+\index{Conversion@{Conversion}!partie2.c@{partie2.c}}
+\subsubsection[{Conversion}]{\setlength{\rightskip}{0pt plus 5cm}{\bf grille} Conversion (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres, }
+\item[{{\bf tableau}}]{plateau}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_ac371a2f31fa0f5b78dc630510fbb578a}
+
+
+Lors de l'unification des parties effectuées par chaque membre du groupe, il a été remarqué que certaines parties ne collaient pas ensemble, et cette fonction permet alors de convertir un plateau donné sous une autre forme afin de créer une certaine compatibilité à chaque partie des membres du groupe. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & la matrice \\
+\hline
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a3f00f55636a57ec46e14a7e6aae74f25}{
+\index{partie2.c@{partie2.c}!Difficile@{Difficile}}
+\index{Difficile@{Difficile}!partie2.c@{partie2.c}}
+\subsubsection[{Difficile}]{\setlength{\rightskip}{0pt plus 5cm}void Difficile (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a3f00f55636a57ec46e14a7e6aae74f25}
+
+
+Paramètre la grille de jeu à 16$\ast$30 cases contenant 99 mines. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a7cb10fae1a08375bbd9d9798bd8ab959}{
+\index{partie2.c@{partie2.c}!Facile@{Facile}}
+\index{Facile@{Facile}!partie2.c@{partie2.c}}
+\subsubsection[{Facile}]{\setlength{\rightskip}{0pt plus 5cm}void Facile (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a7cb10fae1a08375bbd9d9798bd8ab959}
+
+
+Paramètre la grille de jeu à 9$\ast$9 cases contenant 10 mines. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a26141c920c467b441b289e6bfccb4c9d}{
+\index{partie2.c@{partie2.c}!Initialise@{Initialise}}
+\index{Initialise@{Initialise}!partie2.c@{partie2.c}}
+\subsubsection[{Initialise}]{\setlength{\rightskip}{0pt plus 5cm}void Initialise (
+\begin{DoxyParamCaption}
+\item[{{\bf tableau}}]{plateau, }
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a26141c920c467b441b289e6bfccb4c9d}
+
+
+Cette fonction met toutes les valeurs de la matrice à zéro. La mise à zéro est nécessaire avant de mettre les différentes valeurs correspondant au nombre de mines et de voisins afin de ne pas avoir des résultats faussés. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & la matrice \\
+\hline
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_af3ddc6e87f49ce90cc0fd3b20e5186be}{
+\index{partie2.c@{partie2.c}!joue\_\-apres\_\-parametrage@{joue\_\-apres\_\-parametrage}}
+\index{joue\_\-apres\_\-parametrage@{joue\_\-apres\_\-parametrage}!partie2.c@{partie2.c}}
+\subsubsection[{joue\_\-apres\_\-parametrage}]{\setlength{\rightskip}{0pt plus 5cm}int joue\_\-apres\_\-parametrage (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametre}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_af3ddc6e87f49ce90cc0fd3b20e5186be}
+
+
+Cette fonction permet d'ouvrir une grille de jeu apres avoir choisi le niveau de jeu souhaité 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a49156d81d9edb7b66a3e056cfcaf57db}{
+\index{partie2.c@{partie2.c}!Moyen@{Moyen}}
+\index{Moyen@{Moyen}!partie2.c@{partie2.c}}
+\subsubsection[{Moyen}]{\setlength{\rightskip}{0pt plus 5cm}void Moyen (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a49156d81d9edb7b66a3e056cfcaf57db}
+
+
+Paramètre la grille de jeu à 16$\ast$16 cases contenant 40 mines. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_acb6dc5fb493781628a2265b857019dc0}{
+\index{partie2.c@{partie2.c}!Nouvelle\_\-grille@{Nouvelle\_\-grille}}
+\index{Nouvelle\_\-grille@{Nouvelle\_\-grille}!partie2.c@{partie2.c}}
+\subsubsection[{Nouvelle\_\-grille}]{\setlength{\rightskip}{0pt plus 5cm}void Nouvelle\_\-grille (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres, }
+\item[{{\bf tableau}}]{plateau}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_acb6dc5fb493781628a2265b857019dc0}
+
+
+Cette fonction crée une nouvelle grille en l'initialisant en posant les mines et en calculant le nombre de voisins; c'est la fonction qui permet de changer de plateau de jeu a chaque partie. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & la matrice \\
+\hline
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a9c8e470e7ed54f04340099e225b60470}{
+\index{partie2.c@{partie2.c}!personnalise@{personnalise}}
+\index{personnalise@{personnalise}!partie2.c@{partie2.c}}
+\subsubsection[{personnalise}]{\setlength{\rightskip}{0pt plus 5cm}void personnalise (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a9c8e470e7ed54f04340099e225b60470}
+
+
+Etant donné l'inexistance de fonctions de saisie tel que scanf sur une fenêtre sdl, on récupère donc les données saisies par l'utilisateur sur le terminal, d'où l'utilité de cette fonction. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie2_8c_a541933b1cd22acb8b80f379d7dfa7e9f}{
+\index{partie2.c@{partie2.c}!Pose\_\-mines@{Pose\_\-mines}}
+\index{Pose\_\-mines@{Pose\_\-mines}!partie2.c@{partie2.c}}
+\subsubsection[{Pose\_\-mines}]{\setlength{\rightskip}{0pt plus 5cm}void Pose\_\-mines (
+\begin{DoxyParamCaption}
+\item[{{\bf tableau}}]{plateau, }
+\item[{{\bf parametre\_\-grille}}]{parametres}
+\end{DoxyParamCaption}
+)}}
+\label{partie2_8c_a541933b1cd22acb8b80f379d7dfa7e9f}
+
+
+Cette fonction a pour but de sélectionner des cases au hasard pour y poser une mine. Les cases qui contiennent des mines auront alors la valeur -\/1. 
+
+\begin{DoxyAuthor}{Author}
+Emilien RAZAFIMAMPIANDRA 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em plateau} & la matrice \\
+\hline
+{\em parametres} & les parametres de la matrice \\
+\hline
+\end{DoxyParams}

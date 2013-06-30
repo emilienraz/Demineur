@@ -1,0 +1,21 @@
+CC=gcc
+
+demineur: partie1.o partie2.o partie3.o main.o
+	$(CC) -L/opt/csw/lib/ partie1.o partie2.o partie3.o main.o -o demineur -lSDL -lSDL_ttf -lSDL_image
+
+partie1.o: partie1.c demineur.h 
+	$(CC) -I/opt/csw/include/ -c partie1.c	
+
+partie2.o: partie2.c demineur.h
+	$(CC) -I/opt/csw/include/ -c partie2.c
+
+partie3.o: partie3.c demineur.h
+	$(CC) -I/opt/csw/include/ -c partie3.c
+
+main.o: main.c demineur.h
+	$(CC)  -I/opt/csw/include/ -c main.c  
+
+clean:
+	rm *o
+	rm *~
+	rm core	

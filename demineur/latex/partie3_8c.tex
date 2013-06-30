@@ -1,0 +1,817 @@
+\hypertarget{partie3_8c}{
+\section{partie3.c File Reference}
+\label{partie3_8c}\index{partie3.c@{partie3.c}}
+}
+
+
+Ce fichier contient les fonctions de la partie d'Alexandre NOURI.  
+
+
+{\ttfamily \#include \char`\"{}demineur.h\char`\"{}}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{partie3_8c_a529692256011f679109a7ee33fdc6576}{my\_\-malloc} (size\_\-t size)
+\begin{DoxyCompactList}\small\item\em Fonction d'alloction dynamique empruntee au cours de structures de donnees. \item\end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{partie3_8c_a6a92dbf189b85acaf5471fea302937ac}{my\_\-realloc} (void $\ast$p, size\_\-t size)
+\begin{DoxyCompactList}\small\item\em Fonction empruntee au cours de structures de donnees. \item\end{DoxyCompactList}\item 
+\hyperlink{structgrille}{grille} \hyperlink{partie3_8c_a15a22ff5999c57f2ba94fe54be400d48}{new\_\-grille\_\-exemple} (\hyperlink{structparametre__grilles}{parametre\_\-grille} p)
+\begin{DoxyCompactList}\small\item\em Creation d'une grille pour mes tests. \item\end{DoxyCompactList}\item 
+\hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{partie3_8c_a6de04fc12366e0b39edaa7ddc4b9c1a1}{new\_\-param\_\-exemple} ()
+\begin{DoxyCompactList}\small\item\em Creation de parametres d'exemple pour grille. \item\end{DoxyCompactList}\item 
+\hyperlink{structdisplay__matrix}{display\_\-matrix} \hyperlink{partie3_8c_a1e344c790c4b2f212f20abf7b04a15d4}{new\_\-display\_\-matrix} (\hyperlink{structparametre__grilles}{parametre\_\-grille} p)
+\begin{DoxyCompactList}\small\item\em Allocation du tableau d'affichage en memoire. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_ac92160f22e9d9d64b349bfb180ee1b79}{Init} (\hyperlink{struct_context}{Context} C, int x, int y)
+\begin{DoxyCompactList}\small\item\em Cette fonction initialise une partie: initialise le mode graphique: place tout le monde au départ. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_a9c04eca7180e3272167b91d882e19657}{Release} (\hyperlink{struct_context}{Context} C)
+\begin{DoxyCompactList}\small\item\em Cette fonction libere la memoire des elements chargees dans la structure \hyperlink{struct_context}{Context}. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_a66f11999b55f61eb66fe5eadd74b4910}{LoadAll} (\hyperlink{struct_context}{Context} C)
+\begin{DoxyCompactList}\small\item\em Cette fonction sert a charger les images et surfaces utiles pour le jeu. \item\end{DoxyCompactList}\item 
+TTF\_\-Font $\ast$ \hyperlink{partie3_8c_afa6cabf87dbb314c4a71422a8ab8376a}{Load\_\-font} (char $\ast$fichier, int taille)
+\begin{DoxyCompactList}\small\item\em Cette fonction charge la polices d'ecriture du mode jeu. \item\end{DoxyCompactList}\item 
+SDL\_\-Surface $\ast$ \hyperlink{partie3_8c_a2c05ffd23aa6fb72bef5581b4d01fc2c}{LoadImageSDL} (char $\ast$fichier)
+\begin{DoxyCompactList}\small\item\em Cette fonction charge une image extraite d'un tableau. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_ab1e4cf1e27eb13534e8e2df39ae03016}{init\_\-jeu} (\hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} p)
+\begin{DoxyCompactList}\small\item\em Cette fonction remplit le tableau d'affichage par des murs. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a8507add46ad0174bd3757e45d233ae6d}{jouer} (\hyperlink{struct_context}{Context} C, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre})
+\begin{DoxyCompactList}\small\item\em Cette fonction est la fonction qui permet de jouer une partie de demineur. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_ac45cf8faa7a4a5223342f95f0aa303fc}{devoiler\_\-toutes\_\-mines} (\hyperlink{structdisplay__matrix}{display\_\-matrix} affiche\_\-tab, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre})
+\begin{DoxyCompactList}\small\item\em Afficher toutes les mines. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a93bf3de205dd810cc0e589478a346118}{placer\_\-le\_\-bon\_\-carre} (int i, int j, \hyperlink{structdisplay__matrix}{display\_\-matrix} affiche\_\-tab, \hyperlink{structgrille}{grille} ma\_\-grille)
+\begin{DoxyCompactList}\small\item\em Cette fonction devoile une case aux coordonnees i,j. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a1bbe6dee4c8d852f9baf18ab7e92f89e}{actualise\_\-grille} (\hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille\_\-affiche, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} param)
+\begin{DoxyCompactList}\small\item\em Cette fonction devoile toutes les cases qui sont marques comme etant a devoiler. Affichage du resultat dans le tableau d'affichage. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a613a02c6ed5baec22935c0e9318f6526}{sous\_\-deploiement} (int i, int j, \hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille\_\-affiche, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} param)
+\begin{DoxyCompactList}\small\item\em Cette fonction relance le deploiement sur une case voisine de celle devoilee: methode recursive. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a35850810312132465b417434396f2199}{deploiement} (int i, int j, \hyperlink{structdisplay__matrix}{display\_\-matrix} ma\_\-grille\_\-affiche, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} p)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de decouvrir une portion commune de la grille. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_aeb962ebf3bbb4f7e657211f56ef059f3}{actualise\_\-ecran} (\hyperlink{struct_context}{Context} C, \hyperlink{structgrille}{grille} ma\_\-grille, \hyperlink{structparametre__grilles}{parametre\_\-grille} \hyperlink{structparametre}{parametre}, \hyperlink{structdisplay__matrix}{display\_\-matrix} affiche\_\-tab)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'actualiser l'ecran. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_aa972b99a806a240f3eadf20b170b6953}{affiche\_\-case} (int i, int j, \hyperlink{struct_context}{Context} C, \hyperlink{structdisplay__matrix}{display\_\-matrix} affiche\_\-tab, SDL\_\-Rect $\ast$pos)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'afficher une case dans l'ecran. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_af9d66a15937df56ab3a43bcd6e1845e7}{UpdateEvents} (\hyperlink{struct_input}{Input} in)
+\begin{DoxyCompactList}\small\item\em Fonction de simplification de la gestion des Switch en SDL. \item\end{DoxyCompactList}\item 
+\hyperlink{struct_timer}{Timer} \hyperlink{partie3_8c_a04be81f0eaefdbb9a1439ae54c790fa3}{init\_\-Timer} ()
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'initialiser un chronometre. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a8fb510dfc21ddf7c6d4bafd09efa60ca}{start} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de lancer un chronometre. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a893076c8d3fa247c418147ccc14a5155}{stop} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'arreter un chronometre. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_a2cb72f81fba7163c9d223c8c4df3c933}{get\_\-time} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de recuperer le temps ecoule depuis le lancement du chronometre. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_a3660a4727fa12d0cdd2dccfd1a9e0bd1}{pause} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de mettre en pause le chronometre. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_af284c67c49dff16f964ea1b8faa9ea2b}{actualise\_\-pause} (\hyperlink{struct_context}{Context} C, \hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet d'afficher un ecran de pause avec bouton pour revenir au jeu et relancer le chronometre. \item\end{DoxyCompactList}\item 
+void \hyperlink{partie3_8c_abe9c40eb49409ce1ec331ef317feb4ec}{unpause} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction permet de relancer le chronometre qui est suppose est en mode pause. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_ae68f8019b668c1e39fa7e30baa8188af}{is\_\-paused} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction verifie si le chronometre est en mode pause. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_a1cdabdbb604bc096a3e5d6308fbab042}{is\_\-started} (\hyperlink{struct_timer}{Timer} t)
+\begin{DoxyCompactList}\small\item\em Cette fonction verifie si le chronometre est lance. \item\end{DoxyCompactList}\item 
+int \hyperlink{partie3_8c_a99da66e30f7d33ea8a0ec0b121657182}{nouvelle\_\-partie} ()
+\begin{DoxyCompactList}\small\item\em Cette fonction regroupe un exemple d'execution d'une partie basique. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Ce fichier contient les fonctions de la partie d'Alexandre NOURI. \begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{partie3_8c_aeb962ebf3bbb4f7e657211f56ef059f3}{
+\index{partie3.c@{partie3.c}!actualise\_\-ecran@{actualise\_\-ecran}}
+\index{actualise\_\-ecran@{actualise\_\-ecran}!partie3.c@{partie3.c}}
+\subsubsection[{actualise\_\-ecran}]{\setlength{\rightskip}{0pt plus 5cm}void actualise\_\-ecran (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{parametre, }
+\item[{{\bf display\_\-matrix}}]{affiche\_\-tab}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_aeb962ebf3bbb4f7e657211f56ef059f3}
+
+
+Cette fonction permet d'actualiser l'ecran. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em C} & la structure \hyperlink{struct_context}{Context} contenant les images chargees et les surfaces. \\
+\hline
+{\em ma\_\-grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em affiche\_\-tab} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em parametre} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a1bbe6dee4c8d852f9baf18ab7e92f89e}{
+\index{partie3.c@{partie3.c}!actualise\_\-grille@{actualise\_\-grille}}
+\index{actualise\_\-grille@{actualise\_\-grille}!partie3.c@{partie3.c}}
+\subsubsection[{actualise\_\-grille}]{\setlength{\rightskip}{0pt plus 5cm}void actualise\_\-grille (
+\begin{DoxyParamCaption}
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille\_\-affiche, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a1bbe6dee4c8d852f9baf18ab7e92f89e}
+
+
+Cette fonction devoile toutes les cases qui sont marques comme etant a devoiler. Affichage du resultat dans le tableau d'affichage. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ma\_\-grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em ma\_\-grille\_\-affiche} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em param} & parametres \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_af284c67c49dff16f964ea1b8faa9ea2b}{
+\index{partie3.c@{partie3.c}!actualise\_\-pause@{actualise\_\-pause}}
+\index{actualise\_\-pause@{actualise\_\-pause}!partie3.c@{partie3.c}}
+\subsubsection[{actualise\_\-pause}]{\setlength{\rightskip}{0pt plus 5cm}void actualise\_\-pause (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C, }
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_af284c67c49dff16f964ea1b8faa9ea2b}
+
+
+Cette fonction permet d'afficher un ecran de pause avec bouton pour revenir au jeu et relancer le chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} (passe en pointeur) \\
+\hline
+{\em C} & la structure \hyperlink{struct_context}{Context} \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_aa972b99a806a240f3eadf20b170b6953}{
+\index{partie3.c@{partie3.c}!affiche\_\-case@{affiche\_\-case}}
+\index{affiche\_\-case@{affiche\_\-case}!partie3.c@{partie3.c}}
+\subsubsection[{affiche\_\-case}]{\setlength{\rightskip}{0pt plus 5cm}void affiche\_\-case (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf Context}}]{C, }
+\item[{{\bf display\_\-matrix}}]{affiche\_\-tab, }
+\item[{SDL\_\-Rect $\ast$}]{pos}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_aa972b99a806a240f3eadf20b170b6953}
+
+
+Cette fonction permet d'afficher une case dans l'ecran. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+on modifie les valeurs du tableau affiche\_\-tab, le tableau d'affichage 
+\begin{DoxyParams}{Parameters}
+{\em C} & la structure \hyperlink{struct_context}{Context} contenant les images chargees et les surfaces. \\
+\hline
+{\em affiche\_\-tab} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em pos} & la position en pixels \\
+\hline
+{\em i,j} & les coordonnes de la case a affficher \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a35850810312132465b417434396f2199}{
+\index{partie3.c@{partie3.c}!deploiement@{deploiement}}
+\index{deploiement@{deploiement}!partie3.c@{partie3.c}}
+\subsubsection[{deploiement}]{\setlength{\rightskip}{0pt plus 5cm}void deploiement (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille\_\-affiche, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{p}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a35850810312132465b417434396f2199}
+
+
+Cette fonction permet de decouvrir une portion commune de la grille. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em i,j} & les coordonnees de la case d'ou part le devoilement \\
+\hline
+{\em ma\_\-grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em ma\_\-grille\_\-affiche} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em p} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_ac45cf8faa7a4a5223342f95f0aa303fc}{
+\index{partie3.c@{partie3.c}!devoiler\_\-toutes\_\-mines@{devoiler\_\-toutes\_\-mines}}
+\index{devoiler\_\-toutes\_\-mines@{devoiler\_\-toutes\_\-mines}!partie3.c@{partie3.c}}
+\subsubsection[{devoiler\_\-toutes\_\-mines}]{\setlength{\rightskip}{0pt plus 5cm}void devoiler\_\-toutes\_\-mines (
+\begin{DoxyParamCaption}
+\item[{{\bf display\_\-matrix}}]{affiche\_\-tab, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{parametre}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_ac45cf8faa7a4a5223342f95f0aa303fc}
+
+
+Afficher toutes les mines. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em affiche\_\-tab} & les tableau d'affichage \\
+\hline
+{\em ma\_\-grille} & grille de calcul \\
+\hline
+{\em parametres} & parametres \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a2cb72f81fba7163c9d223c8c4df3c933}{
+\index{partie3.c@{partie3.c}!get\_\-time@{get\_\-time}}
+\index{get\_\-time@{get\_\-time}!partie3.c@{partie3.c}}
+\subsubsection[{get\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}int get\_\-time (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a2cb72f81fba7163c9d223c8c4df3c933}
+
+
+Cette fonction permet de recuperer le temps ecoule depuis le lancement du chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} (passe en pointeur) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retourne le temps ecoule 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_ac92160f22e9d9d64b349bfb180ee1b79}{
+\index{partie3.c@{partie3.c}!Init@{Init}}
+\index{Init@{Init}!partie3.c@{partie3.c}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}int Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_ac92160f22e9d9d64b349bfb180ee1b79}
+
+
+Cette fonction initialise une partie: initialise le mode graphique: place tout le monde au départ. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em C,Structure} & \hyperlink{struct_context}{Context} (passee en pointeur) contenant les variables graphiques du jeu, la resolution de l'ecran. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int soit 0 si tout s'est bien passe ou -\/1 sinon 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_ab1e4cf1e27eb13534e8e2df39ae03016}{
+\index{partie3.c@{partie3.c}!init\_\-jeu@{init\_\-jeu}}
+\index{init\_\-jeu@{init\_\-jeu}!partie3.c@{partie3.c}}
+\subsubsection[{init\_\-jeu}]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-jeu (
+\begin{DoxyParamCaption}
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{p}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_ab1e4cf1e27eb13534e8e2df39ae03016}
+
+
+Cette fonction remplit le tableau d'affichage par des murs. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em ma\_\-grille} & le tableau d'affichage de type \hyperlink{structdisplay__matrix}{display\_\-matrix} (passe en pointeur) \\
+\hline
+{\em p} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a04be81f0eaefdbb9a1439ae54c790fa3}{
+\index{partie3.c@{partie3.c}!init\_\-Timer@{init\_\-Timer}}
+\index{init\_\-Timer@{init\_\-Timer}!partie3.c@{partie3.c}}
+\subsubsection[{init\_\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Timer} init\_\-Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a04be81f0eaefdbb9a1439ae54c790fa3}
+
+
+Cette fonction permet d'initialiser un chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+t, de type Timer(passe en pointeur), la structure qui contient les informations necessaires a un chronometre 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_ae68f8019b668c1e39fa7e30baa8188af}{
+\index{partie3.c@{partie3.c}!is\_\-paused@{is\_\-paused}}
+\index{is\_\-paused@{is\_\-paused}!partie3.c@{partie3.c}}
+\subsubsection[{is\_\-paused}]{\setlength{\rightskip}{0pt plus 5cm}int is\_\-paused (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_ae68f8019b668c1e39fa7e30baa8188af}
+
+
+Cette fonction verifie si le chronometre est en mode pause. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Soit vrai, soit faux 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a1cdabdbb604bc096a3e5d6308fbab042}{
+\index{partie3.c@{partie3.c}!is\_\-started@{is\_\-started}}
+\index{is\_\-started@{is\_\-started}!partie3.c@{partie3.c}}
+\subsubsection[{is\_\-started}]{\setlength{\rightskip}{0pt plus 5cm}int is\_\-started (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a1cdabdbb604bc096a3e5d6308fbab042}
+
+
+Cette fonction verifie si le chronometre est lance. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+soit VRAI soit FAUX 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a8507add46ad0174bd3757e45d233ae6d}{
+\index{partie3.c@{partie3.c}!jouer@{jouer}}
+\index{jouer@{jouer}!partie3.c@{partie3.c}}
+\subsubsection[{jouer}]{\setlength{\rightskip}{0pt plus 5cm}void jouer (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{parametre}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a8507add46ad0174bd3757e45d233ae6d}
+
+
+Cette fonction est la fonction qui permet de jouer une partie de demineur. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em C} & variables graphiques \\
+\hline
+{\em grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins miness \\
+\hline
+{\em parametres} & les parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_afa6cabf87dbb314c4a71422a8ab8376a}{
+\index{partie3.c@{partie3.c}!Load\_\-font@{Load\_\-font}}
+\index{Load\_\-font@{Load\_\-font}!partie3.c@{partie3.c}}
+\subsubsection[{Load\_\-font}]{\setlength{\rightskip}{0pt plus 5cm}TTF\_\-Font$\ast$ Load\_\-font (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fichier, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_afa6cabf87dbb314c4a71422a8ab8376a}
+
+
+Cette fonction charge la polices d'ecriture du mode jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em fichier} & un tableau de char \\
+\hline
+{\em taille} & la taille de la police \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+font la police chargee 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a66f11999b55f61eb66fe5eadd74b4910}{
+\index{partie3.c@{partie3.c}!LoadAll@{LoadAll}}
+\index{LoadAll@{LoadAll}!partie3.c@{partie3.c}}
+\subsubsection[{LoadAll}]{\setlength{\rightskip}{0pt plus 5cm}int LoadAll (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a66f11999b55f61eb66fe5eadd74b4910}
+
+
+Cette fonction sert a charger les images et surfaces utiles pour le jeu. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em C,structure} & \hyperlink{struct_context}{Context} (passee en pointeur) contenant les variables graphiques du jeu, la resolution de l'ecran. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int soit 0 si tout s'est bien passe ou -\/1 sinon 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a2c05ffd23aa6fb72bef5581b4d01fc2c}{
+\index{partie3.c@{partie3.c}!LoadImageSDL@{LoadImageSDL}}
+\index{LoadImageSDL@{LoadImageSDL}!partie3.c@{partie3.c}}
+\subsubsection[{LoadImageSDL}]{\setlength{\rightskip}{0pt plus 5cm}SDL\_\-Surface$\ast$ LoadImageSDL (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{fichier}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a2c05ffd23aa6fb72bef5581b4d01fc2c}
+
+
+Cette fonction charge une image extraite d'un tableau. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em fichier} & une chaine de caracteres representant le nom de l'image a charger \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+f la surface image chargee 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a529692256011f679109a7ee33fdc6576}{
+\index{partie3.c@{partie3.c}!my\_\-malloc@{my\_\-malloc}}
+\index{my\_\-malloc@{my\_\-malloc}!partie3.c@{partie3.c}}
+\subsubsection[{my\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ my\_\-malloc (
+\begin{DoxyParamCaption}
+\item[{size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a529692256011f679109a7ee33fdc6576}
+
+
+Fonction d'alloction dynamique empruntee au cours de structures de donnees. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+Amelioration du malloc par l'ajout d'un message d'erreur. 
+\begin{DoxyParams}{Parameters}
+{\em size} & le nombre d'elements a allouer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p un pointeur alloue 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a6a92dbf189b85acaf5471fea302937ac}{
+\index{partie3.c@{partie3.c}!my\_\-realloc@{my\_\-realloc}}
+\index{my\_\-realloc@{my\_\-realloc}!partie3.c@{partie3.c}}
+\subsubsection[{my\_\-realloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ my\_\-realloc (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{p, }
+\item[{size\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a6a92dbf189b85acaf5471fea302937ac}
+
+
+Fonction empruntee au cours de structures de donnees. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+Amelioration du realloc par l'ajout d'un message d'erreur. 
+\begin{DoxyParams}{Parameters}
+{\em size} & le nombre d'elements a re-\/allouer \\
+\hline
+{\em $\ast$p} & un pointeur vers une donnee a re-\/allouer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+p un pointeur re-\/alloue 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a1e344c790c4b2f212f20abf7b04a15d4}{
+\index{partie3.c@{partie3.c}!new\_\-display\_\-matrix@{new\_\-display\_\-matrix}}
+\index{new\_\-display\_\-matrix@{new\_\-display\_\-matrix}!partie3.c@{partie3.c}}
+\subsubsection[{new\_\-display\_\-matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf display\_\-matrix} new\_\-display\_\-matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{p}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a1e344c790c4b2f212f20abf7b04a15d4}
+
+
+Allocation du tableau d'affichage en memoire. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em p,parametres} & de la grille (passes en pointeur). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ma\_\-grille Tableau contenant les donnees d'affichage. 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a15a22ff5999c57f2ba94fe54be400d48}{
+\index{partie3.c@{partie3.c}!new\_\-grille\_\-exemple@{new\_\-grille\_\-exemple}}
+\index{new\_\-grille\_\-exemple@{new\_\-grille\_\-exemple}!partie3.c@{partie3.c}}
+\subsubsection[{new\_\-grille\_\-exemple}]{\setlength{\rightskip}{0pt plus 5cm}{\bf grille} new\_\-grille\_\-exemple (
+\begin{DoxyParamCaption}
+\item[{{\bf parametre\_\-grille}}]{p}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a15a22ff5999c57f2ba94fe54be400d48}
+
+
+Creation d'une grille pour mes tests. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & parametres de la grille (passes en pointeur). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ma\_\-grille une grille exemple. 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a6de04fc12366e0b39edaa7ddc4b9c1a1}{
+\index{partie3.c@{partie3.c}!new\_\-param\_\-exemple@{new\_\-param\_\-exemple}}
+\index{new\_\-param\_\-exemple@{new\_\-param\_\-exemple}!partie3.c@{partie3.c}}
+\subsubsection[{new\_\-param\_\-exemple}]{\setlength{\rightskip}{0pt plus 5cm}{\bf parametre\_\-grille} new\_\-param\_\-exemple (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a6de04fc12366e0b39edaa7ddc4b9c1a1}
+
+
+Creation de parametres d'exemple pour grille. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+p Parametres charges. 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a99da66e30f7d33ea8a0ec0b121657182}{
+\index{partie3.c@{partie3.c}!nouvelle\_\-partie@{nouvelle\_\-partie}}
+\index{nouvelle\_\-partie@{nouvelle\_\-partie}!partie3.c@{partie3.c}}
+\subsubsection[{nouvelle\_\-partie}]{\setlength{\rightskip}{0pt plus 5cm}int nouvelle\_\-partie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a99da66e30f7d33ea8a0ec0b121657182}
+
+
+Cette fonction regroupe un exemple d'execution d'une partie basique. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+ie sans placer au hasard les mines et sans les parametres \hypertarget{partie3_8c_a3660a4727fa12d0cdd2dccfd1a9e0bd1}{
+\index{partie3.c@{partie3.c}!pause@{pause}}
+\index{pause@{pause}!partie3.c@{partie3.c}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}void pause (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a3660a4727fa12d0cdd2dccfd1a9e0bd1}
+
+
+Cette fonction permet de mettre en pause le chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} (passe en pointeur) \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a93bf3de205dd810cc0e589478a346118}{
+\index{partie3.c@{partie3.c}!placer\_\-le\_\-bon\_\-carre@{placer\_\-le\_\-bon\_\-carre}}
+\index{placer\_\-le\_\-bon\_\-carre@{placer\_\-le\_\-bon\_\-carre}!partie3.c@{partie3.c}}
+\subsubsection[{placer\_\-le\_\-bon\_\-carre}]{\setlength{\rightskip}{0pt plus 5cm}void placer\_\-le\_\-bon\_\-carre (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf display\_\-matrix}}]{affiche\_\-tab, }
+\item[{{\bf grille}}]{ma\_\-grille}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a93bf3de205dd810cc0e589478a346118}
+
+
+Cette fonction devoile une case aux coordonnees i,j. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em i,j} & les coordonnees de la case a devoiler \\
+\hline
+{\em ma\_\-grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em affiche\_\-tab} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a9c04eca7180e3272167b91d882e19657}{
+\index{partie3.c@{partie3.c}!Release@{Release}}
+\index{Release@{Release}!partie3.c@{partie3.c}}
+\subsubsection[{Release}]{\setlength{\rightskip}{0pt plus 5cm}int Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Context}}]{C}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a9c04eca7180e3272167b91d882e19657}
+
+
+Cette fonction libere la memoire des elements chargees dans la structure \hyperlink{struct_context}{Context}. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em C,structure} & \hyperlink{struct_context}{Context} (passee en pointeur) contenant les variables graphiques du jeu, la resolution de l'ecran. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un int soit 0 si tout s'est bien passe ou -\/1 sinon 
+\end{DoxyReturn}
+\hypertarget{partie3_8c_a613a02c6ed5baec22935c0e9318f6526}{
+\index{partie3.c@{partie3.c}!sous\_\-deploiement@{sous\_\-deploiement}}
+\index{sous\_\-deploiement@{sous\_\-deploiement}!partie3.c@{partie3.c}}
+\subsubsection[{sous\_\-deploiement}]{\setlength{\rightskip}{0pt plus 5cm}void sous\_\-deploiement (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf display\_\-matrix}}]{ma\_\-grille\_\-affiche, }
+\item[{{\bf grille}}]{ma\_\-grille, }
+\item[{{\bf parametre\_\-grille}}]{param}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a613a02c6ed5baec22935c0e9318f6526}
+
+
+Cette fonction relance le deploiement sur une case voisine de celle devoilee: methode recursive. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em i,j} & les coordonnees de la case a devoiler \\
+\hline
+{\em ma\_\-grille} & la grille contenant les elements de calculs tels que la position des mines ou le nombre de voisins mines \\
+\hline
+{\em ma\_\-grille\_\-affiche} & le tableau d'affichage des elements de notre ecran graphique durant le jeu \\
+\hline
+{\em param} & parametres de la grille \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a8fb510dfc21ddf7c6d4bafd09efa60ca}{
+\index{partie3.c@{partie3.c}!start@{start}}
+\index{start@{start}!partie3.c@{partie3.c}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void start (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a8fb510dfc21ddf7c6d4bafd09efa60ca}
+
+
+Cette fonction permet de lancer un chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+modification des champs: temps de depart, t-\/$>$started et t-\/$>$paused 
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} (passe en pointeur) \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_a893076c8d3fa247c418147ccc14a5155}{
+\index{partie3.c@{partie3.c}!stop@{stop}}
+\index{stop@{stop}!partie3.c@{partie3.c}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void stop (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_a893076c8d3fa247c418147ccc14a5155}
+
+
+Cette fonction permet d'arreter un chronometre. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+modification des champs: t-\/$>$started et t-\/$>$paused 
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} (passe en pointeur) \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_abe9c40eb49409ce1ec331ef317feb4ec}{
+\index{partie3.c@{partie3.c}!unpause@{unpause}}
+\index{unpause@{unpause}!partie3.c@{partie3.c}}
+\subsubsection[{unpause}]{\setlength{\rightskip}{0pt plus 5cm}void unpause (
+\begin{DoxyParamCaption}
+\item[{{\bf Timer}}]{t}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_abe9c40eb49409ce1ec331ef317feb4ec}
+
+
+Cette fonction permet de relancer le chronometre qui est suppose est en mode pause. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & la structure \hyperlink{struct_timer}{Timer} \\
+\hline
+\end{DoxyParams}
+\hypertarget{partie3_8c_af9d66a15937df56ab3a43bcd6e1845e7}{
+\index{partie3.c@{partie3.c}!UpdateEvents@{UpdateEvents}}
+\index{UpdateEvents@{UpdateEvents}!partie3.c@{partie3.c}}
+\subsubsection[{UpdateEvents}]{\setlength{\rightskip}{0pt plus 5cm}void UpdateEvents (
+\begin{DoxyParamCaption}
+\item[{{\bf Input}}]{in}
+\end{DoxyParamCaption}
+)}}
+\label{partie3_8c_af9d66a15937df56ab3a43bcd6e1845e7}
+
+
+Fonction de simplification de la gestion des Switch en SDL. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Nouri
+\end{DoxyAuthor}
+inspire du site du zero 
+\begin{DoxyParams}{Parameters}
+{\em In} & la structure \hyperlink{struct_input}{Input} qui contient un tableau de toutes les evenements (traduits en variables) \\
+\hline
+\end{DoxyParams}
